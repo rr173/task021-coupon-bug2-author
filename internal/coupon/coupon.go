@@ -265,7 +265,7 @@ func runPipeline(items []Item, coupons []Coupon, floorRateBps int) *Result {
 		} else {
 			for i := range lines {
 				if lines[i].item.Category == scope {
-					base += lines[i].orig
+					base += effSnap[i]
 				}
 			}
 		}
